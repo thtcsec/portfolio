@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -506,6 +507,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -516,6 +518,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -590,15 +593,16 @@
         }
     </style>
 </head>
+
 <body data-theme="light">
     <header>
         <nav>
             <div class="logo">Tu</div>
             <ul class="nav-links">
                 <li><a href="index.html" class="back-home">
-                    <i class="fas fa-arrow-left"></i>
-                    Trở về Trang chủ
-                </a></li>
+                        <i class="fas fa-arrow-left"></i>
+                        Trở về Trang chủ
+                    </a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
@@ -660,7 +664,8 @@
                 <div class="project-content">
                     <h3 class="project-title">Flight Reservation</h3>
                     <p class="project-description">
-                        Full‑stack flight booking web app with user login, search, and ticket management using MVC and secure authentication.
+                        Full‑stack flight booking web app with user login, search, and ticket management using MVC and
+                        secure authentication.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">ASP.NET MVC</span>
@@ -712,7 +717,7 @@
 
             <div class="project-card" data-category="ai java">
                 <div class="project-image">
-                    <img src="fr.png" alt="Face Recognition Preview" style="width: 35%; height: 40%;"/>
+                    <img src="fr.png" alt="Face Recognition Preview" style="width: 35%; height: 40%;" />
                     <div class="project-status status-progress">Đang phát triển</div>
                 </div>
                 <div class="project-content">
@@ -739,7 +744,38 @@
                     </div>
                 </div>
             </div>
-
+            <div class="project-card" data-category="desktop csharp cybersecurity">
+                <div class="project-image">
+                    <img src="lsm.png" alt="Linux Server Manager Preview" style="width: 35%; height: 40%;" />
+                    <div class="project-status status-completed" data-i18n="status_completed">Đã hoàn thành</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-i18n="proj_linux_server_manager_title">Linux Server Manager</h3>
+                    <p class="project-description" data-i18n="proj_linux_server_manager_desc">
+                        Ứng dụng WPF C# đóng vai trò là SSH client mạnh mẽ, sử dụng thư viện SSH.NET (Renci.SshNet) để
+                        quản lý
+                        và tự động hóa các tác vụ trên máy chủ Linux, cung cấp giao diện trực quan và các tính năng tiện
+                        lợi.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">WPF</span>
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">SSH.NET (Renci)</span>
+                        <span class="tech-badge">Linux</span>
+                        <span class="tech-badge">Desktop App</span>
+                    </div>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar"></i> Tháng 6, 2025</span>
+                        <span><i class="fas fa-clock"></i> <span data-i18n="status-completed">Đã hoàn thành</span></span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-primary view-project" data-project="linux-server-manager">
+                            <i class="fas fa-search"></i>
+                            <span data-i18n="view_project_btn">View Project</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <div class="project-card" data-category="java web">
                 <div class="project-image">
                     <i class="fas fa-comments"></i>
@@ -748,7 +784,8 @@
                 <div class="project-content">
                     <h3 class="project-title">Chat Application (WebSocket Java)</h3>
                     <p class="project-description">
-                        Ứng dụng chat thời gian thực sử dụng WebSocket để giao tiếp client-server, hỗ trợ đa người dùng và tin nhắn tức thời.
+                        Ứng dụng chat thời gian thực sử dụng WebSocket để giao tiếp client-server, hỗ trợ đa người dùng
+                        và tin nhắn tức thời.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">Java</span>
@@ -868,7 +905,6 @@
                     <div class="tech-stack">
                         <span class="tech-badge">Android</span>
                         <span class="tech-badge">Java</span>
-                        <span class="tech-badge">Media Player API</span>
                         <span class="tech-badge">UI/UX</span>
                     </div>
                     <div class="project-meta">
@@ -906,7 +942,7 @@
         <button class="floating-btn" id="scrollToTop" title="Go to top">
             <i class="fas fa-arrow-up"></i>
         </button>
-        </div>
+    </div>
 
     <footer>
         <p>© 2025 Trinh Hoang Tu. All rights reserved.</p>
@@ -922,7 +958,7 @@
         const icon = themeToggle.querySelector('i');
 
         const savedTheme = localStorage.getItem('theme') ||
-                            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         body.setAttribute('data-theme', savedTheme);
         icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
@@ -984,6 +1020,11 @@
             'face-recognition': {
                 title: 'Face Recognition',
                 description: 'Client‑server system using WebSocket and external API for facial analysis.',
+                link: ''
+            },
+            'linux-server-manager': {
+                title: 'Linux Server Manager',
+                description: 'Ứng dụng WPF C# đóng vai trò là SSH client mạnh mẽ, sử dụng thư viện SSH.NET (Renci.SshNet) để quản lý và tự động hóa các tác vụ trên máy chủ Linux, cung cấp giao diện trực quan và các tính năng tiện lợi.',
                 link: ''
             },
             'chat-application-websocket': { // Updated ID
@@ -1092,4 +1133,5 @@
         animateOnScroll();
     </script>
 </body>
+
 </html>
